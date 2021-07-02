@@ -27,14 +27,6 @@ form > h1 {
     gap: 10px;
     padding: 20px;
 }
-.form-body > div {
-    margin-top: 10px;
-}
-.form-body div {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
 .form-body div label {
     padding-left: 10px;
     color: gray;
@@ -43,6 +35,7 @@ form > h1 {
 form > div > div:nth-child(4) {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     align-items: center;
     gap: 0;
 }
@@ -76,9 +69,20 @@ input[type="email"] {
     color: gray;
 }
 
+input {
+    grid-column: 1 / 4;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 200px 1fr 200px;
+}
+
 .error {
     font-size: 12px;
     color: orangered;
-    display: block;
     padding-top: 5px;
+    margin-right: 15px;
+    text-align: end;
+    grid-column: 3;
 }
